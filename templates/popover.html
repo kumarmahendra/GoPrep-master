@@ -1,0 +1,47 @@
+
+<!--<ion-popover-view  ng-controller="AccordionDemoCtrl">
+        <ion-content>
+                 <ion-list>
+        <div class="list" >
+            <div ng-repeat="module in modules">
+                <ion-item class="item-stable" ng-click="toggleGroup(module)" ng-class="{active: isGroupShown(module)}" style="padding:8px">
+                    <i class="icon" ng-class="isGroupShown(module) ? 'ion-ios-arrow-down' : 'ion-ios-arrow-right'"></i>
+                    {{module.title}}
+                </ion-item>
+
+                <ion-item class="accordion" ng-repeat="lo in module.LOS" 
+                          ng-show="isGroupShown(module)" style="padding: 8px">
+                      <div class="row">
+                           <!-- <a  ng-click="openModal(lo.content)">{{lo.lo}}</a> -->
+                      <!--    <a >{{lo.lo}}</a> 
+                      </div>
+
+            </ion-item>
+            </div>
+          </div>
+      </ion-list>
+    </ion-content>
+</ion-popover-view>-->
+
+
+<ion-popover-view  ng-controller="popoverlistCtrl" >
+    <ion-content>
+        <ion-list>
+            <div class="list" >
+                <div ng-repeat="module in record">
+                    <ion-item class="item-stable" ng-click="toggleGroup(module)" ng-class="{active: isGroupShown(module)}" style="padding:8px">
+                        <i class="icon" ng-class="isGroupShown(module) ? 'ion-ios-arrow-down' : 'ion-ios-arrow-right'"></i>
+                        {{module.title}}
+                    </ion-item>
+                          
+
+                    <div ng-repeat="mod in module.lesson">
+                        <ion-item class="item-stable" ng-click="toggleGroup(module)" ng-class="{active: isGroupShown(module)}" style="padding:8px">
+                            {{mod.title}}
+                        </ion-item>        
+                    </div>    
+                </div>
+            </div>
+      </ion-list>
+    </ion-content>
+</ion-popover-view>

@@ -1,0 +1,43 @@
+ <ion-modal-view class="product edit create">
+          <form name="itemEdit" novalidate>
+            <ion-header-bar class="bar-positive fix-buttons">
+              <a class="button" ng-click="closeModal()">Cancel</a>
+              <h1 class="title">LO's Report</h1>
+            </ion-header-bar>
+            <ion-content has-bouncing="true">
+                <table border="2" style="width:100%">
+                <tr>
+                    <td>
+                     <div class="col">Title</div>
+                    </td>
+                    <td>
+                    <div class="col">Prof.</div>
+                    </td>
+                    <td>
+                     <div class="col">Grit</div>
+                    </td>
+                    <td>
+                      <div class="col">Status</div>
+                    </td>
+                    </tr>    
+                <tr ng-repeat="LO in los">
+                    <td>
+                    <div class="col">
+                        {{LO.title}}
+                        </div>
+                    </td>
+                    <td>
+                    <div class="col">{{LO.proficiency}}</div>
+                    </td>
+                    <td>
+                    <div class="col">{{LO.grit}}</div>
+                    </td>
+                    <td>
+                    <div class="col">{{LO.status}} </div>
+                    </td>
+                    </tr>
+                </table>
+             
+            </ion-content>
+          </form>
+        </ion-modal-view>

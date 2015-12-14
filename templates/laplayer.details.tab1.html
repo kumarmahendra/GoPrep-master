@@ -1,0 +1,356 @@
+<ion-view name="question" >
+  <ion-content>
+
+    
+    <div class="list card">
+
+  <div class="item item-avatar">
+    
+    <h2> {{item.question}}</h2>
+    
+  </div>
+
+   <div > 
+       
+       
+  <div class="list">
+      
+      
+      
+      
+      <div ng-if="item.qtype==1">
+
+  <label class="item item-radio">
+    <input type="radio" name="group">
+    <div class="item-content">
+     <button class="button button-stable">
+  Option1
+</button>
+    </div>
+    <i class="radio-icon ion-checkmark"></i>
+  </label>
+ <label class="item item-radio">
+    <input type="radio" name="group">
+    <div class="item-content">
+     <button class="button button-stable">
+ Option 2
+</button>
+    </div>
+    <i class="radio-icon ion-checkmark"></i>
+  </label>
+
+       <label class="item item-radio">
+    <input type="radio" name="group">
+    <div class="item-content">
+     <button class="button button-stable">
+  Option 3
+</button>
+    </div>
+    <i class="radio-icon ion-checkmark"></i>
+  </label>
+
+       <label class="item item-radio">
+    <input type="radio" name="group">
+    <div class="item-content">
+    <button class="button button-stable">
+  Option 4
+</button>
+    </div>
+    <i class="radio-icon ion-checkmark"></i>
+  </label>
+
+ </div>
+      
+      
+ <div ng-if="item.qtype==2" >
+ 
+
+      <label class="item item-radio">
+    <input type="radio" name="group">
+    <div class="item-content">
+     <button class="button button-stable">
+  Option1
+</button>
+    </div>
+    <i class="radio-icon ion-checkmark"></i>
+  </label>
+ <label class="item item-radio">
+    <input type="radio" name="group">
+    <div class="item-content">
+     <button class="button button-stable">
+ Option 2
+</button>
+    </div>
+    <i class="radio-icon ion-checkmark"></i>
+  </label>
+
+       <label class="item item-radio">
+    <input type="radio" name="group">
+    <div class="item-content">
+     <button class="button button-stable">
+  Option 3
+</button>
+    </div>
+    <i class="radio-icon ion-checkmark"></i>
+  </label>
+
+       <label class="item item-radio">
+    <input type="radio" name="group">
+    <div class="item-content">
+    <button class="button button-stable">
+  Option 4
+</button>
+    </div>
+    <i class="radio-icon ion-checkmark"></i>
+  </label>
+ 
+<label class="item item-radio">
+    <input type="radio" name="group">
+    <div class="item-content">
+    <button class="button button-stable">
+  Option 4
+</button>
+    </div>
+    <i class="radio-icon ion-checkmark"></i>
+  </label>
+     
+     
+     
+     
+     
+     
+</div>  
+      
+      <div ng-if="item.qtype==3" >
+ 
+   <label class="item item-radio">
+    <input type="radio" name="group">
+    <div class="item-content">
+     <button class="button button-stable">
+  Option1
+</button>
+    </div>
+    <i class="radio-icon ion-checkmark"></i>
+  </label>
+ <label class="item item-radio">
+    <input type="radio" name="group">
+    <div class="item-content">
+     <button class="button button-stable">
+ Option 2
+</button>
+    </div>
+    <i class="radio-icon ion-checkmark"></i>
+  </label>
+
+       <label class="item item-radio">
+    <input type="radio" name="group">
+    <div class="item-content">
+     <button class="button button-stable">
+  Option 3
+</button>
+    </div>
+    <i class="radio-icon ion-checkmark"></i>
+  </label>
+
+       <label class="item item-radio">
+    <input type="radio" name="group">
+    <div class="item-content">
+    <button class="button button-stable">
+  Option 4
+</button>
+    </div>
+    <i class="radio-icon ion-checkmark"></i>
+  </label>
+ 
+<label class="item item-radio">
+    <input type="radio" name="group">
+    <div class="item-content">
+    <button class="button button-stable">
+  Option 5
+</button>
+    </div>
+    <i class="radio-icon ion-checkmark"></i>
+  </label>
+      <label class="item item-radio">
+    <input type="radio" name="group">
+    <div class="item-content">
+     <button class="button button-stable">
+  Option 6
+</button>
+    </div>
+    <i class="radio-icon ion-checkmark"></i>
+  </label>
+     
+ 
+
+     
+     
+     
+     
+     
+     
+     
+</div>  
+      
+      
+ 
+      
+      
+      <div ng-if="item.qtype==4" >
+    
+  <h3>Select some text </h3>
+<div ng-mouseup="showSelectedText()">
+Do you think that facebook, twitter, linkedin are designed to make people addict ?, Then you have to read this article. The most popular social networking sites are following people's habit. It is not concept, it is people's habit
+</div>
+<br/>
+<h3>Selected Text</h3>
+<div ng-bind="selectedText"></div>
+          
+          
+
+     
+     
+     
+</div>  
+      <div ng-if="item.qtype==5" >
+    
+    
+    <label class="item item-radio">
+    <input type="radio" name="group">
+    <div class="item-content">
+     <button class="button button-stable">
+  True
+</button>
+    </div>
+    <i class="radio-icon ion-checkmark"></i>
+  </label>
+ <label class="item item-radio">
+    <input type="radio" name="group">
+    <div class="item-content">
+     <button class="button button-stable">
+ False
+</button>
+    </div>
+    <i class="radio-icon ion-checkmark"></i>
+  </label>
+     
+     
+     
+     
+     
+</div>  
+      <div ng-if="item.qtype==6" >
+    
+ <ion-list sortable draggable=".card" sorted="onReorder($fromIndex, $toIndex)">
+            <ion-item ng-repeat="contact in contacts" class="item-light item-avatar card item-complex">
+                <div class="item-content">
+                    <img ng-src="img/{{contact.img}}" />
+                    <div class="item-divider">{{contact.name}}</div>
+                    <div class="item-text-wrap">
+                        <ul>
+                            <li>Phone: {{contact.phone}}</li>
+                            <li>Mobile: {{contact.mobile}}</li>
+                            <li>Email: {{contact.email}}</li>
+                        </ul>
+                    </div>
+                </div>
+            </ion-item>
+        </ion-list>
+
+     
+     
+     
+     
+     
+     
+     
+</div>  
+      
+      <div ng-if="item.qtype==7" >
+    
+  
+	<form name="myForm">
+  <label>Number:
+    <input type="number" name="input" ng-model="numericentry.value"
+           min="0" max="10000000" required>
+ </label>
+  <div role="alert">
+    <span class="error" ng-show="myForm.input.$error.required">
+      Required!</span>
+    <span class="error" ng-show="myForm.input.$error.number">
+      Not valid number!</span>
+  </div>
+  <tt>value = {{numericentry.value}}</tt><br/>
+
+
+  <tt>myForm.$valid = {{myForm.$valid}}</tt><br/>
+
+ </form>
+  
+ 
+
+     
+     
+     
+     
+     
+     
+     
+</div>  
+      <div ng-if="item.qtype==8" >
+    
+  <label class="item item-input">
+    <input type="text" placeholder="Answer">
+  </label>
+  
+ 
+
+     
+     
+     
+     
+     
+     
+     
+</div>  
+      <div ng-if="item.qtype==9" >
+    
+  <label class="item item-input">
+    <input type="text" placeholder="First Name">
+  </label>
+  
+ 
+
+     
+     
+     
+     
+     
+     
+     
+</div>  
+      
+      
+      
+
+</div>
+       </div>   
+     
+
+  <div class="item tabs tabs-secondary tabs-icon-left">
+    
+       <button ng-click= nextquestionla() class="button button-positive">
+  Check Answer
+</button>
+       
+  </div>
+
+</div>
+	
+   
+  
+     
+      
+   
+    </ion-content>
+</ion-view>

@@ -1,0 +1,64 @@
+ <ion-view title="goals" ng-controller="lolistdisplay">
+       <ion-content scroll="false" >
+          	<tab-slide-box>
+			    	<div class="tsb-icons" style="height:46px">
+			    		<div class="tsb-ic-wrp">
+							<ion-scroll direction="x" class="tsb-hscroll">
+							<a ng-click="goalmenufilter()"  class="ion-home1">All</a>
+                            <a ng-click="goalmenufilter('Maths')" class="ion-ios-game-controller-b1">OverDue</a>
+							<a ng-click="goalmenufilter('Maths')" class="ion-ios-game-controller-b1">Maths</a>
+							<a ng-click="goalmenufilter('Physics')" class="ion-email1">Physics</a>
+							<a ng-click="goalmenufilter('Chemistry')" class="ion-model-s1">Chemistry</a>
+							
+							</ion-scroll>
+						</div>
+			    	</div>
+			        <ion-slide-box show-pager="false" on-slide-changed="slideHasChanged($index)">
+			            <ion-slide>
+                            <div ui-sref="eventmenu.goalsmenu.practice.qn({qnid:1,sqno:0})">
+                            <div ng-repeat="l in lo | filter:q">
+			                 <ion-item>{{l.name}}</ion-item>
+                                </div></div>
+                                
+			            </ion-slide>
+			           <ion-slide>
+                           <div ui-sref="eventmenu.goalsmenu.practice.ga({qnid:1,sqno:0})">
+                            <div ng-repeat="l in lo | filter:q">
+			                 <ion-item>{{l.name}}</ion-item>
+                                </div></div>
+            
+                                </div>
+			            </ion-slide>
+			            <ion-slide>
+                            <div ng-repeat="l in lo | filter:q">
+			                 <ion-item>{{l.name}}</ion-item>
+            
+                                </div>
+			            </ion-slide>
+						<ion-slide>
+                            <div ng-repeat="l in lo | filter:q">
+			                 <ion-item>{{l.name}}</ion-item>
+            
+                                </div>
+			            </ion-slide>
+			           
+						
+			        </ion-slide-box>
+          	</tab-slide-box>
+        </ion-content>
+      </ion-view>
+
+
+<style>
+		.slider-slide h3{
+			color:#000;
+			margin-top:10px;
+		}
+		.scroll{
+			height:100%;
+		}
+		
+		.tabbed-slidebox .tsb-icons:after{
+			display:none;
+		}
+	</style>

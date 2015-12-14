@@ -1,0 +1,169 @@
+<style>
+.box
+{
+  padding:70px; 
+}
+.bar-footer {
+    bottom: 0;
+    border-top-width: 0px;
+    border-bottom-width: 0;
+    background-position: top;
+    height: 45px;
+}
+    .bar {
+  
+    padding: 0px;
+    width: 100%;
+   
+    border-top: 0px solid transparent;
+    border-bottom: 0px solid #ddd;
+        background-color: #1bbc9b;
+  
+}
+    .button.button-block, .button.button-full {
+    margin-top: 1px;
+    margin-bottom: 0px;
+}
+    
+.item-select select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    position: absolute;
+    top: -1px;
+    bottom: 0;
+    right: 0;
+    padding: 0px 33px 0px 9px;
+    min-width: 100%;
+    border: none;
+    background:  #1BBC9B;
+    color: #f8f8f8;
+    text-indent: 0.01px;
+    text-overflow: '';
+    white-space: nowrap;
+    font-size: 27px;
+    cursor: pointer;
+    direction: rtl;
+}
+    .bar-subheader {
+    top: 45px;
+    display: block;
+    height: 55px;
+}
+    .row {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 10px;
+    width: 100%;
+    }
+    .col {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -moz-box-flex: 1;
+    -moz-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    display: block;
+    padding: 0px;
+    width: 100%;
+}
+.input-label {
+    display: table;
+    padding: 0px;
+    max-width: 200px;
+    width: 35%;
+    color: #444;
+    font-size: 16px;
+}
+.item {
+    border-color: #ddd;
+    background-color: #1BBC9B;
+
+    position: relative;
+    z-index: 2;
+    display: block;
+    margin: -1px;
+    padding: 20px;
+    border-width: 0px;
+    border-style: solid;
+    font-size: 16px;
+}
+    .button.button-stable {
+    border-color: #f8f8f8;
+    background-color:#091521;
+    color: #f8f8f8;
+}
+    .bar .button {
+    z-index: 1;
+    padding: 0px 8px;
+    min-width: initial;
+    min-height: 0px;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 40px;
+    color: #fff;
+}
+.slct
+    {
+        background-color:#ffffff;
+        color:#000;  
+        font-size: 14px;
+    } 
+    
+</style>
+<head>
+    <link href="css/ionic.css" rel="stylesheet">
+      <link rel="stylesheet" href="css/styles/main.css">
+</head>
+
+<ion-view view-title="Mathematics">
+
+    <div class="bar bar-subheader">
+      <div class="row">
+          <div class="col">
+            <button  class="button button-icon ion-more" ng-click="popover.show($event)"></button>  
+          </div>
+          <div class="col">
+        
+             <label class="item item-select">
+                <div class="input-label">
+                    <select> 
+                        <option class="slct"  selected>Proficiency Level</option>
+                        <option class="slct">Beginner</option>
+                        <option class="slct">Intermediate</option>
+                        <option class="slct">Proficient</option>
+                        <option class="slct">Advanced</option>
+                        <option class="slct">Grit Level</option>
+                        <option class="slct">Low</option>
+                        <option class="slct">Medium</option>
+                        <option class="slct">High</option>
+                    </select>
+                 </div>
+             </label>
+         </div>
+       </div>
+    </div>
+    
+    
+<ion-content>
+    <br/><br/>
+
+    <ion-list>       
+        <div class="deckgrid clearfix" deckgrid ng-if="lo"  source="lo" cardTemplate="templates/deckgrid-card.html"></div>
+    </ion-list>
+
+</ion-content>
+    
+    <ion-footer-bar  >
+        <div class="button-bar">
+            <button class="button button-stable button-block ">All</button>
+            <button class="button button-stable button-block ">Today</button>
+            <button class="button button-stable button-block ">Week</button>
+            <button class="button button-stable button-block ">Month</button>
+        </div>
+    </ion-footer-bar>    
+</ion-view>

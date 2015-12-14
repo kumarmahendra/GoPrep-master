@@ -1,0 +1,53 @@
+ <ion-modal-view class="product edit create">
+          <form name="itemEdit" novalidate>
+            <ion-header-bar class="bar-positive fix-buttons">
+              <a class="button" ng-click="closeModal()">Cancel</a>
+              <h1 class="title">Lessons Report</h1>
+            </ion-header-bar>
+            <ion-content has-bouncing="true">
+                <table border="2" style="width:100%">
+                <tr>
+                    <td>
+                     <div class="col">Title</div>
+                    </td>
+                    <td>
+                    <div class="col">Prof.</div>
+                    </td>
+                    <td>
+                     <div class="col">Grit</div>
+                    </td>
+                    <td>
+                      <div class="col">Status</div>
+                    </td>
+                    </tr>    
+                <tr ng-repeat="lesson in lessons">
+                    <td>
+                    <div class="col">
+                        {{lesson.title}}
+                        </div>
+                    </td>
+                    <td>
+                    <div class="col">{{lesson.proficiency}}</div>
+                    </td>
+                    <td>
+                    <div class="col">{{lesson.grit}}</div>
+                    </td>
+                    <td>
+                    <div class="col">{{lesson.status}} </div>
+                    </td>
+                    </tr>
+                </table>
+                       
+              <div>
+                 
+                        <hr>
+                      <div class="row">
+                        <div  ng-init=doughnut() align=center>
+                          <chart value="myChart" id="myCoolChart1"></chart>
+                        </div>
+                      </div>
+            </div>   
+               
+            </ion-content>
+          </form>
+        </ion-modal-view>

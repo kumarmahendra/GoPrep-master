@@ -1,0 +1,37 @@
+<style>
+    .imgp{
+        padding:70px;
+        
+    }
+    .imgp1{
+        background-color:#1BBC9B;
+    }
+
+</style>
+<ion-view view-title="Notes Dashboard">
+
+
+    <ion-content class="imgp1"  ng-init="loadImages()">
+      <div>
+          <div class="imgp">
+            <a href="#/event/notes" >
+              <div  ng-repeat="image in Course" >
+                  <div class="row" ng-if="$index%2==0">
+                          <div class="col col-50" >
+                              <div style="padding:15px;" >
+                                    <img ng-src="{{image.src}}" width="100%">
+                              </div>
+                          </div>
+                          <div class="col">
+                              <div  style="padding:15px;">
+                                    <img ng-src="{{Course[$index+1].src}}" width="100%">
+                              </div>
+                          </div>
+                  </div>
+              </div>
+            </a>
+          </div>
+        </div>
+     </ion-content>
+</ion-view>
+        

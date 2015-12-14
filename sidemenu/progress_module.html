@@ -1,0 +1,57 @@
+
+<style>
+.box
+{
+  padding:70px; 
+}
+</style>
+<head>
+    <link href="css/ionic.css" rel="stylesheet">
+</head>
+
+<ion-view view-title="Mathematics">
+    <ion-content>
+       <ion-list>
+        <div class="list card">
+            <div ng-repeat="module in record">
+             
+                <ion-item class="item-stable"
+                    ng-click="toggleGroup(module)"
+                    ng-class="{active: isGroupShown(module)}">
+                    <div class="row">
+                      <div class="col col-75">
+                        <a ui-sref="eventmenu.progress_lesson({lessonId:module.id})">
+                    {{module.title}}  
+                    </a>
+                        </div>
+                        <div class="col"> 
+                    <button ng-click="openModal(module,myChart)" class="item item-icon-right">
+                    
+                        <i class="icon ion-card"></i>
+                    </button>
+                        </div>
+                        
+                    </div>
+                </ion-item>
+                  <hr>
+
+            </div>
+            
+              <div>
+                    <div class="row">
+                        <div class="span12">
+                          <h2>In action</h2>
+                        </div>
+                      </div>
+                        <hr>
+                      <div class="row">
+                        <div class="span6" ng-init=doughnut() align=center>
+                          <chart value="myChart" id="myCoolChart"></chart>
+                        </div>
+                      </div>
+            </div>    
+            
+          </div>
+      </ion-list>
+    </ion-content>
+</ion-view>

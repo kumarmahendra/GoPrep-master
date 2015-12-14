@@ -1,0 +1,45 @@
+<style>
+
+      .imgp1{
+        background-color:#1BBC9B;
+    }
+.item-complex .item-content, .item-radio .item-content {
+    position: relative;
+    z-index: 2;
+    padding: 16px 49px 16px 16px;
+    border: none;
+    background-color: #1BBC9B;
+}
+</style>
+      <ion-view>
+      	<ion-content class="imgp1">
+      		<ion-list>
+          <div ng-repeat="module in modules">
+      			<ion-item style="padding: 20px; background-color:#17A084; color:#ffffff; font-size: 20px;"   >{{module.title}}</ion-item>
+
+
+             <div ng-repeat="lo in module.LOS">
+                       <ion-item ui-sref="eventmenu.base.content.module({moduleId:lo.id})" style=" background-color:#1BBC9B; color:#ffffff; font-size: 20px;">
+                   
+                           
+                           <div class="row">
+                               
+                            <div class="col-15">
+                           <img  ng-src="{{lo.src}}"  style="width:37px;height:55px;">
+                            </div>
+                            
+                           <div class= "col" style="padding:18px; ">
+                            {{lo.lo}}
+                             </div> 
+                             
+                           </div>
+                        </ion-item>  
+                      </div>
+
+
+      			
+            </div>
+      		</ion-list>
+      	</ion-content>
+
+      </ion-view>

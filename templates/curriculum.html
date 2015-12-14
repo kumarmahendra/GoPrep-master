@@ -1,0 +1,73 @@
+<!--    <div class="bar bar-header">
+  <button class="button icon ion-navicon"></button>
+  <h1 class="title">Header Buttons</h1>
+  <button class="button">Edit</button>
+</div>
+   <ion-header-bar class="bar-positive">
+      <h1 class="title">Accordion List</h1>
+    </ion-header-bar>
+
+    <ion-content>
+
+      <ion-list>
+        <div ng-repeat="group in groups">
+          <ion-item class="item-stable"
+                    ng-click="toggleGroup(group)"
+                    ng-class="{active: isGroupShown(group)}">
+              <i class="icon" ng-class="isGroupShown(group) ? 'ion-minus' : 'ion-plus'"></i>
+            &nbsp;
+            Group {{group.name}}
+          </ion-item>
+          <ion-item class="item-accordion"
+                    ng-repeat="item in group.items"
+                    ng-show="isGroupShown(group)">
+            {{item}}
+          </ion-item>
+        </div>
+      </ion-list>
+   </ion-content>href="#/event/base/content"
+
+
+-->
+<style>
+    .imgp{
+        padding:70px;
+        
+    }
+    .imgp1{
+        background-color:#1BBC9B;
+    }
+
+</style>
+<ion-view view-title="Curriculum Dashboard">
+
+  <ion-header-bar class="bar-positive">
+      <h1 class="title">Curriculum player</h1>
+  </ion-header-bar>
+    <ion-content class="imgp1"  ng-init="loadImages()">
+      <div>
+          <div class="imgp">
+            <a href="#/event/base/content" >
+              <div  ng-repeat="image in Course" >
+                  <div class="row" ng-if="$index%2==0">
+                          <div class="col col-50" >
+                              <div style="padding:15px;" >
+                                    <img ng-src="{{image.src}}" width="100%">
+                              </div>
+                          </div>
+                          <div class="col">
+                              <div  style="padding:15px;">
+                                    <img ng-src="{{Course[$index+1].src}}" width="100%">
+                              </div>
+                          </div>
+                  </div>
+              </div>
+            </a>
+          </div>
+        </div>
+     </ion-content>
+</ion-view>
+        
+        
+        
+       
